@@ -1,0 +1,28 @@
+{
+  "id": "todo",
+  "name": "todo",
+  "displayName": "Todo List",
+  "description": "Système simple de gestion des tâches avec statuts",
+  "version": "1.0.0",
+  "author": "CoreCMS Test",
+  "main": "admin-ui/index.tsx",
+  "enabled": true,
+  "adminRoute": "/admin/todo",
+  "apiRoutes": [
+    "/api/todo/tasks",
+    "/api/todo/stats"
+  ],
+  "dependencies": [],
+  "prismaSchema": "prisma/schema.prisma",
+  "apiFolder": "api",
+  "prismaModels": ["TodoTask"],
+  "category": "productivity",
+  "keywords": ["todo", "tasks", "productivity"],
+  "repository": "https://github.com/kylian-test/corecms-module-todo",
+  "homepage": "https://github.com/kylian-test/corecms-module-todo#readme",
+  "license": "MIT",
+  "engines": {
+    "node": ">=18.0.0",
+    "corecms": ">=1.0.0"
+  }
+} 
