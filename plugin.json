@@ -5,6 +5,7 @@
   "description": "Système simple de gestion des tâches avec statuts",
   "version": "1.0.0",
   "author": "CoreCMS Test",
+  "coreVersion": "1.0.0",
   "main": "admin-ui/index.tsx",
   "enabled": true,
   "adminRoute": "/admin/todo",
