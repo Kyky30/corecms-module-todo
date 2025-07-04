@@ -1,6 +1,6 @@
 {
   "name": "corecms-module-todo",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Module Todo List pour CoreCMS",
   "main": "admin-ui/index.tsx",
   "scripts": {
