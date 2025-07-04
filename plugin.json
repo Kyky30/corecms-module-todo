@@ -18,8 +18,8 @@
   "prismaModels": ["TodoTask"],
   "category": "productivity",
   "keywords": ["todo", "tasks", "productivity"],
-  "repository": "https://github.com/kylian-test/corecms-module-todo",
-  "homepage": "https://github.com/kylian-test/corecms-module-todo#readme",
+  "repository": "https://github.com/Kyky30/corecms-module-todo",
+  "homepage": "https://github.com/Kyky30/corecms-module-todo#readme",
   "license": "MIT",
   "engines": {
     "node": ">=18.0.0",

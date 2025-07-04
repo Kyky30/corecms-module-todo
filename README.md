@@ -17,7 +17,7 @@ Ce module s'installe automatiquement via l'interface CoreCMS :
 
 1. Accédez à `/admin/modules`
 2. Cliquez sur **"Installer depuis GitHub"**
-3. Collez l'URL : `https://github.com/kylian-test/corecms-module-todo`
+3. Collez l'URL : `https://github.com/Kyky30/corecms-module-todo`
 4. Cliquez sur **"Installer"**
 
 ## 📋 Configuration requise
@@ -188,7 +188,7 @@ Le module crée automatiquement une table `todo_tasks` avec :
 ## 🐛 Support
 
 Pour signaler un bug ou demander une fonctionnalité :
-1. Ouvrez une [issue sur GitHub](https://github.com/kylian-test/corecms-module-todo/issues)
+1. Ouvrez une [issue sur GitHub](https://github.com/Kyky30/corecms-module-todo/issues)
 2. Décrivez le problème en détail
 3. Incluez les étapes de reproduction
 
