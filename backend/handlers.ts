@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server'
-import { db } from '@/lib/db'
+import { prisma } from '@/lib/db'
 
 export async function getTasks(request: NextRequest) {
   try {
@@ -11,7 +11,7 @@ export async function getTasks(request: NextRequest) {
     if (completed !== null) where.completed = completed === 'true'
     if (priority) where.priority = priority
 
-    const tasks = await db.todoTask.findMany({
+    const tasks = await prisma.todoTask.findMany({
       where,
       orderBy: [
         { completed: 'asc' },
@@ -42,7 +42,7 @@ export async function createTask(request: NextRequest) {
       )
     }
 
-    const task = await db.todoTask.create({
+    const task = await prisma.todoTask.create({
       data: {
         title,
         description,
@@ -73,7 +73,7 @@ export async function updateTask(request: NextRequest) {
       )
     }
 
-    const task = await db.todoTask.update({
+    const task = await prisma.todoTask.update({
       where: { id },
       data: updates
     })
@@ -100,7 +100,7 @@ export async function deleteTask(request: NextRequest) {
       )
     }
 
-    await db.todoTask.delete({
+    await prisma.todoTask.delete({
       where: { id }
     })
 
@@ -117,13 +117,13 @@ export async function deleteTask(request: NextRequest) {
 export async function getStats(request: NextRequest) {
   try {
     const [totalTasks, completedTasks] = await Promise.all([
-      db.todoTask.count(),
-      db.todoTask.count({ where: { completed: true } })
+      prisma.todoTask.count(),
+      prisma.todoTask.count({ where: { completed: true } })
     ])
 
     const pendingTasks = totalTasks - completedTasks
     
-    const overdueTasks = await db.todoTask.count({
+    const overdueTasks = await prisma.todoTask.count({
       where: {
         completed: false,
         dueDate: {
